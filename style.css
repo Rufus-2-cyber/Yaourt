@@ -1,0 +1,321 @@
+:root{
+    --creme: #fff1d0;
+    --creme-clair: #fff8ec;
+    --fraise: #c2334f;
+    --vanille: #e0a526;
+    --vert: #83c083;
+    --brun: #3b2a20;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin:0;
+    padding: 0;
+    background-color: var(--creme);
+    color: var(--brun);
+    font-size: 16px;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+#menu2{
+   border-radius: 40%;
+   border: 2px solid #111;
+   text-align: center;
+   align-items: center;
+   justify-content: center;
+   margin: 10px;
+   display: none;
+}
+nav{
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 100;
+    background-color: var(--creme-clair);
+    width: 100%;
+    box-shadow: 0 2px 8px rgba(0,0,0,.15);
+    transition: transform .3s;
+}
+nav.cachee{
+    transform: translateY(-100%);
+}
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 8px 28px;
+    margin: 0;
+    padding: 8px 16px;
+    list-style: none;
+    font-size: 20px;
+}
+#texte2 p{
+    text-align: center;
+    align-items:center;
+    justify-content: center;
+}
+li{
+    display: flex;
+    flex-direction: row;
+    gap: 7px;
+    text-decoration: none;
+}
+.navi-texte,.navi-log{
+    text-align: center;
+    justify-content: center;
+}
+nav img {
+    height: 50px;
+    border-radius: 16px;
+    border: 2px solid var(--creme-clair);
+}
+.salutation{
+    margin-top: 70px;
+}
+h1,h2{
+    text-align: center;
+    color: var(--fraise);
+    scroll-margin-top: 90px;
+}
+#section-accueil {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    padding: 0 20px;
+}
+.ACC{
+    width: 30%;
+}
+.ACC img{
+    width: 100%;
+    border-radius: 16px;
+}
+.text-acceuiel{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: var(--creme-clair);
+    line-height: 1.6;
+    border-radius: 20px;
+    border: 4px solid white;
+    box-shadow: 10px 10px 0 var(--vanille);
+}
+.text-acceuiel p{
+    margin: 0;
+}
+
+/* ---------- Cartes produits ---------- */
+.conteneure{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.carte-produits{
+    display: flex;
+    flex-direction: column;
+    border: 4px solid var(--vanille);
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: #fff;
+    transition: transform .3s;
+}
+.carte-produits:hover{
+    transform: translateY(-8px);
+}
+.carte-photo img{
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+}
+.carte-texte{
+    flex: 1;
+    padding: 12px 14px;
+    text-align: center;
+    line-height: 1.5;
+}
+.carte-texte p{
+    margin: 0;
+}
+.carte-prix{
+    padding: 0 14px 14px;
+    text-align: center;
+}
+.carte-prix p{
+    display: inline-block;
+    margin: 0;
+    padding: 6px 18px;
+    border-radius: 20px;
+    background-color: var(--fraise);
+    color: #fff;
+    font-weight: bold;
+    white-space: nowrap;
+}
+#vanille{
+    background-color: #fff4d6;
+    border-color: var(--vanille);
+}
+#fraise{
+    background-color: #fde6ec;
+    border-color: var(--fraise);
+}
+#simple{
+    background-color: #eef7ee;
+    border-color: var(--vert);
+}
+
+/* ---------- Commentaires ---------- */
+.conteneure2{
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 15px;
+    padding: 12px 20px 16px;
+    scroll-snap-type: x proximity;
+}
+.conteneure2 img{
+    height: 280px;
+    width: auto;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    border: 2px solid #888;
+    border-radius: 25px;
+    transition: transform 0.5s ;
+}
+.conteneure2 img:hover{
+    transform:  translateY(-8px);
+}
+
+/* ---------- Contacts ---------- */
+ #liste-contacts{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 20px;
+    margin: 20px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 20px;
+ }
+ .contact{
+    display:flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+    border: 2px solid black;
+    border-radius: 20px;
+ }
+ .contact a{
+    text-decoration: none;
+ }
+ #whatsapp{
+    border-color: #25D366;
+    background-color: #FFF;
+ }
+ #whatsapp a{
+    color: #25D366;
+ }
+ #facebook{
+    border-color: #0866FF;
+    background-color: #FFF;
+ }
+  #facebook a{
+    color: #0866FF;
+ }
+  #gmail{
+    border-color: rgb(236, 50, 50);
+    background-color: #FFF;
+ }
+  #gmail a{
+    color: rgb(236, 50, 50);
+ }
+  #tiktok{
+    border-color: rgb(0, 0, 0);
+    background-color: #FFF;
+ }
+ #tiktok a{
+    color: #222;
+ }
+
+/* ================= RESPONSIVE ================= */
+.conteneure{
+    grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
+}
+#menu2{
+    cursor: pointer;
+}
+
+/* Tablettes et téléphones : menu hamburger */
+@media (max-width: 900px){
+    #menu2{
+        display: flex;
+        margin: 0;
+        padding: 6px;
+    }
+    nav ul{
+        justify-content: space-between;
+        font-size: 18px;
+        gap: 8px;
+    }
+    nav ul li:nth-child(n+3){
+        display: none;
+    }
+    nav.ouvert ul li:nth-child(n+3){
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        padding: 6px 0;
+        border-top: 1px solid #e8d9b8;
+    }
+    .salutation{
+        margin-top: 80px;
+    }
+    #section-accueil{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .ACC{
+        width: 100%;
+        max-width: 360px;
+    }
+    #liste-contacts{
+        grid-template-columns: 1fr 1fr;
+        padding: 10px;
+        margin: 10px;
+    }
+}
+
+/* Petits téléphones */
+@media (max-width: 480px){
+    body{
+        font-size: 15px;
+    }
+    h2{
+        font-size: 1.2rem;
+        padding: 0 10px;
+    }
+    nav ul{
+        font-size: 16px;
+    }
+    .text-acceuiel{
+        padding: 14px;
+        box-shadow: 6px 6px 0 var(--vanille);
+    }
+    .conteneure2 img{
+        height: 220px;
+    }
+    #liste-contacts{
+        grid-template-columns: 1fr;
+    }
+    .contact{
+        padding: 8px 0;
+    }
+}
